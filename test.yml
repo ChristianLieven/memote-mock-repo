@@ -1,0 +1,95 @@
+!!omap
+- metabolites:
+  - !!omap
+    - id: lipid_c
+    - name: ''
+    - compartment: c
+  - !!omap
+    - id: lipid_e
+    - name: ''
+    - compartment: e
+  - !!omap
+    - id: protein_c
+    - name: ''
+    - compartment: c
+  - !!omap
+    - id: protein_e
+    - name: ''
+    - compartment: e
+  - !!omap
+    - id: rna_c
+    - name: ''
+    - compartment: c
+  - !!omap
+    - id: rna_e
+    - name: ''
+    - compartment: e
+- reactions:
+  - !!omap
+    - id: BIOMASS_TEST
+    - name: ''
+    - metabolites: !!omap
+      - lipid_c: -1.0
+      - protein_c: -5.0
+      - rna_c: -2.0
+    - lower_bound: 0.0
+    - upper_bound: 1000.0
+    - gene_reaction_rule: ''
+    - objective_coefficient: 1.0
+  - !!omap
+    - id: EX_lipid_e
+    - name: ' exchange'
+    - metabolites: !!omap
+      - lipid_e: -1.0
+    - lower_bound: -1000.0
+    - upper_bound: 1000.0
+    - gene_reaction_rule: ''
+  - !!omap
+    - id: EX_protein_e
+    - name: ' exchange'
+    - metabolites: !!omap
+      - protein_e: -1.0
+    - lower_bound: -1000.0
+    - upper_bound: 1000.0
+    - gene_reaction_rule: ''
+  - !!omap
+    - id: EX_rna_e
+    - name: ' exchange'
+    - metabolites: !!omap
+      - rna_e: -1.0
+    - lower_bound: -1000.0
+    - upper_bound: 1000.0
+    - gene_reaction_rule: ''
+  - !!omap
+    - id: MET_Atec
+    - name: ''
+    - metabolites: !!omap
+      - lipid_c: 1.0
+      - lipid_e: -1.0
+    - lower_bound: -1000.0
+    - upper_bound: 1000.0
+    - gene_reaction_rule: ''
+  - !!omap
+    - id: MET_Btec
+    - name: ''
+    - metabolites: !!omap
+      - protein_c: 1.0
+      - protein_e: -1.0
+    - lower_bound: -1000.0
+    - upper_bound: 1000.0
+    - gene_reaction_rule: ''
+  - !!omap
+    - id: MET_Ctec
+    - name: ''
+    - metabolites: !!omap
+      - rna_c: 1.0
+      - rna_e: -1.0
+    - lower_bound: -1000.0
+    - upper_bound: 1000.0
+    - gene_reaction_rule: ''
+- genes: []
+- id: test
+- compartments: !!omap
+  - c: ''
+  - e: ''
+- version: '1.2'
