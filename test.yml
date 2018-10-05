@@ -1,6 +1,10 @@
 !!omap
 - metabolites:
   - !!omap
+    - id: aminoacid_c
+    - name: ''
+    - compartment: c
+  - !!omap
     - id: lipid_c
     - name: ''
     - compartment: c
@@ -84,6 +88,15 @@
     - metabolites: !!omap
       - rna_c: 1.0
       - rna_e: -1.0
+    - lower_bound: -1000.0
+    - upper_bound: 1000.0
+    - gene_reaction_rule: ''
+  - !!omap
+    - id: Proteinsynthesis
+    - name: ''
+    - metabolites: !!omap
+      - aminoacid_c: -1.0
+      - protein_c: 1.0
     - lower_bound: -1000.0
     - upper_bound: 1000.0
     - gene_reaction_rule: ''

@@ -33,6 +33,7 @@
       <species boundaryCondition="false" compartment="e" constant="false" hasOnlySubstanceUnits="false" id="M_lipid_e" />
       <species boundaryCondition="false" compartment="e" constant="false" hasOnlySubstanceUnits="false" id="M_protein_e" />
       <species boundaryCondition="false" compartment="e" constant="false" hasOnlySubstanceUnits="false" id="M_rna_e" />
+      <species boundaryCondition="false" compartment="c" constant="false" hasOnlySubstanceUnits="false" id="M_aminoacid_c" />
     </listOfSpecies>
     <listOfReactions>
       <reaction fast="false" id="R_BIOMASS_TEST" reversible="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
@@ -80,6 +81,14 @@
         <listOfReactants>
           <speciesReference constant="true" species="M_rna_e" stoichiometry="1" />
         </listOfReactants>
+      </reaction>
+      <reaction fast="false" id="R_Proteinsynthesis" reversible="true" fbc:lowerFluxBound="cobra_default_lb" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference constant="true" species="M_aminoacid_c" stoichiometry="1" />
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference constant="true" species="M_protein_c" stoichiometry="1" />
+        </listOfProducts>
       </reaction>
     </listOfReactions>
   </model>
