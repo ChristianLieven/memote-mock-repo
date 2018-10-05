@@ -1,6 +1,6 @@
 # memote-mock-repo
 
-This repo is used for unit testing memote against a reasonably complex repository.
+This repo is used for unit testing memote against a reasonably complex repository which may include several branches, tagged commits, and commits in which the model was not changed.
 
 ---
 
